@@ -1,0 +1,25 @@
+<div class="my-margin">
+  <div class="my-description-container" style="margin-top: 10px">
+    <div class="app-name">Secure vote</div>
+    <div class="my-description">
+      avec secure vote, acceder a la liste des candidats, leur projet
+      et voter puis acceder aux resultats de vote des leurs publication.
+      <button class="btn-login" routerLink="">créer un compte</button>
+    </div>
+  </div>
+  <form class="my-form" #f="ngForm" (ngSubmit)="login()">
+    <div class="my-contener-label">
+      <label class="my-label">N° Electeur </label>
+      <input type="text" name="id" placeholder="votre numero d'electeur" class="my-input" [(ngModel)]="userlogin.numeroNational" #id="ngModel" required>
+    </div>
+    <div class="error" *ngIf="id.touched && id.invalid">le numero d'electeur est obligatoire</div>
+    <div class="my-contener-label">
+      <label class="my-label">Mot de passe </label>
+      <input type="password" name="password" placeholder="votre mot de passe" class="my-input" [(ngModel)]="userlogin.password" #p="ngModel" required>
+    </div>
+    <div class="error" *ngIf="p.touched && p.invalid">le mot de passe  est obligatoire</div>
+    <div class="error" *ngIf="f.submitted && f.invalid">Veuillez renseigner des informations valides</div>
+    <button type="submit" class="my-btn-submit">Se connecter</button>
+    <br/><br/>
+  </form>
+</div>

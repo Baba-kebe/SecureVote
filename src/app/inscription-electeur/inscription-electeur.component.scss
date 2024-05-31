@@ -1,0 +1,46 @@
+.radio-container{
+  width : 80% ;
+  margin-left : 10%;
+  color: #0F1111;
+  font-family: "Segoe UI", "serif";
+  font-style: italic;
+  text-align: center;
+}
+input[type=radio]{
+  cursor: pointer;
+}
+.my-description-container{
+  float: left;
+  margin-top:100px;
+  width: 25%;
+  text-align: center;
+  margin-left: 2%;
+}
+.app-name{
+  color: #0866FF;
+  font-size: 30px;
+  font-family: "Arial Black", "sans-serif";
+  font-style: italic;
+  text-align: center;
+}
+.my-description{
+  margin-top: 5px;
+  font-family: "Segoe UI", "sans-serif";
+  text-align: justify;
+}
+.my-description:first-letter{
+  text-transform: capitalize;
+}
+.btn-login{
+  width : 80%;
+  margin-top : 40px;
+  margin-left : 10%;
+  color : whitesmoke;
+  background-color: #0866FF;
+  height : 40px;
+  border: 0px  #F2F2F2;
+  &:hover{
+    font-style: italic;
+  }
+}
+

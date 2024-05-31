@@ -1,0 +1,50 @@
+<div class="my-margin">
+  <div class="my-description-container">
+    <div class="app-name">Secure vote</div>
+    <div class="my-description">
+      avec secure vote, acceder a la liste des candidats, leur projet
+      et voter puis acceder aux resultats de vote des leurs publication.
+      <button class="btn-login" routerLink="login">Se connecter</button>
+    </div>
+  </div>
+  <form class="my-form" (ngSubmit)="addUser()">
+    <div class="my-contener-label">
+      <label class="my-label">Nom :</label>
+      <input type="text" name="nom" placeholder="Votre nom" class="my-input" [(ngModel)]="user.nom"/>
+    </div>
+    <div class="my-contener-label">
+      <label class="my-label">prenom :</label>
+      <input type="text" name="prenom" placeholder="Votre prenom" class="my-input" [(ngModel)]="user.prenom"/>
+    </div>
+    <div class="my-contener-label">
+      <label class="my-label">Date de naissance :</label>
+      <input type="date" name="birthDate" placeholder="Votre date de naissance" class="my-input" [(ngModel)]="user.birthDate"/>
+    </div>
+    <div class="my-contener-label">
+      <label class="my-label">Sexe :</label>
+      <div class="radio-container">
+        Homme : <input type="radio" name="sexe" value="H" [(ngModel)]="user.sexe" />
+        Femme : <input type="radio" name="sexe" value="F" [(ngModel)]="user.sexe" />
+        Non binaire : <input type="radio" name="sexe" value="O" [(ngModel)]="user.sexe" />
+      </div>
+      <div class="my-contener-label">
+        <label class="my-label">Adresse :</label>
+        <input type="text" name="adresse" placeholder="Votre departement, votre region" class="my-input" [(ngModel)]="user.adresse"/>
+      </div>
+    </div>
+    <div class="my-contener-label">
+      <label class="my-label">Numero national d'identité :</label>
+      <input type="number" name="numeroNational" placeholder="Votre numero national" class="my-input" [(ngModel)]="user.numeroNational" />
+    </div>
+    <div class="my-contener-label">
+      <label class="my-label">Numero de telephone :</label>
+      <input type="number" name="phoneNumber" placeholder="Votre numero de telephone" class="my-input" [(ngModel)]="user.numeroTelephone" />
+    </div>
+    <div class="my-contener-label">
+      <label class="my-label">Mot de passe :</label>
+      <input type="password" name="password" placeholder="Votre mot de passe" class="my-input" [(ngModel)]="user.password"/>
+    </div>
+    <button class="my-btn-submit" type="submit"> s'inscrire </button>
+    <br/><br/>
+  </form>
+</div>

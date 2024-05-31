@@ -1,0 +1,24 @@
+<div class="my-margin">
+  <div>
+
+    <form class="my-form" #f = "ngForm" (ngSubmit)="addCandidat()">
+      <div>
+        <label class="my-label"> numero d'identité national : </label>
+        <input class="my-input" type="number" name="numeroNational" placeholder="numero d'identité national du candidat" [(ngModel)]="candidat.userId" />
+      </div>
+      <div>
+        <label class="my-label"> Accronyme du parti :</label>
+        <input class="my-input" type="text" name="accronyme" placeholder="Accronyme du parti" [(ngModel)]="candidat.labelParti" />
+
+      </div>
+      <div>
+        <label class="my-label"> nom du partie : </label>
+        <input class="my-input" type="text" name="nomParti" placeholder="Nom du Parti" [(ngModel)]="candidat.nomParti" />
+      </div>
+      <div>
+        <button class="my-btn-submit" type="submit"> enregistrer </button>
+      </div>
+      <br>
+    </form>
+  </div>
+</div>
