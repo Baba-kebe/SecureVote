@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import {httpInterceptor} from "./interceptor/http.interceptor";
+import { KeyvaluePipe } from './keyvalue.pipe';
+import { EditerCompteComponent } from './editer-compte/editer-compte.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {httpInterceptor} from "./interceptor/http.interceptor";
     MypopupComponent,
     FooterComponent,
     LoginComponent,
-    PageAccueilComponent
+    PageAccueilComponent,
+    KeyvaluePipe,
+    EditerCompteComponent
   ],
   imports: [
     BrowserModule,

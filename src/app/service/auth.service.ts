@@ -15,6 +15,7 @@ export class AuthService {
   authUrl = "http://localhost:8080/api/vs/auth/login"
   hasVoted!: boolean;
   username? : string;
+  userId? : string;
   role? : string;
   jwtToken! : string ;
   isAuthenticated : boolean = false;
@@ -35,7 +36,6 @@ export class AuthService {
   }
 
   public authenticate(login : Login){
-    console.log("***"+login)
     return this.http.post<JwtToken>(this.authUrl,login).subscribe({
       next : (data) => {
         this.jwtToken = data.token;
@@ -46,9 +46,23 @@ export class AuthService {
       }
     })
   }
+  public logOut(){
+    this.jwtToken = '';
+    this.isAuthenticated = false;
+    // @ts-ignore
+    this.role = null;
+    // @ts-ignore
+    this.username = null;
+    // @ts-ignore
+    this.hasVoted = null;
+    // @ts-ignore
+    this.userId = null;
+    this.router.navigateByUrl("/login")
+  }
 
   private getUserData(tokenData: JwtPayload) {
 
+    console.log(tokenData)
     this.isAuthenticated = true;
     // @ts-ignore
     this.role = tokenData.role;
@@ -56,6 +70,8 @@ export class AuthService {
     this.username = tokenData.nom.toUpperCase() + " "+tokenData.prenom;
     // @ts-ignore
     this.hasVoted = tokenData.hasVoted;
+    // @ts-ignore
+    this.userId = tokenData.sub;
 
     this.router.navigateByUrl("/accueil")
   }

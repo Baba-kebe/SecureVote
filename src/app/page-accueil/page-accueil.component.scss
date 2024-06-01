@@ -1,0 +1,48 @@
+.page-body{
+  margin-top : 40px;
+  width :70%;
+  margin-left : 10%;
+  border : 1px solid #000;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+.btn-vote{
+  margin-top: 5px;
+  border : 0px;
+  min-height: 30px;
+  min-width : 20%;
+  background-color: #4CAF50;
+  color : whitesmoke;
+  text-transform: capitalize;
+  &:hover{
+    background-color: #408aff;
+    font-style: italic;
+  }
+}
+button{
+  border: 0px;
+  color : whitesmoke;
+  background-color: #4CAF50;
+  margin-left: 10px;
+  font-style: italic;
+  min-height: 40px;
+  border-radius: 10px;
+  &:hover{
+    background-color: #a4f1a7;
+    color : #0F1111;
+  }
+}
+.logout{
+  border: 0px;
+  color : whitesmoke;
+  background-color: #ff5151;
+  margin-left: 10px;
+  font-style: italic;
+  min-height: 40px;
+  border-radius: 10px;
+  &:hover{
+    background-color: #ff0505;
+    color : whitesmoke;
+  }
+}
