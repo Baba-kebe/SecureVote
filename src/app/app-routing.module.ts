@@ -6,13 +6,16 @@ import {LoginComponent} from "./login/login.component";
 import {PageAccueilComponent} from "./page-accueil/page-accueil.component";
 import {guardGuard} from "./guard/guard.guard";
 import {EditerCompteComponent} from "./editer-compte/editer-compte.component";
+import {PageVoteComponent} from "./page-vote/page-vote.component";
 
 const routes: Routes = [
-  { path : '', component : InscriptionElecteurComponent},
+  { path : '', component : LoginComponent },
   { path : 'login', component : LoginComponent },
+  { path : 'inscription', component : InscriptionElecteurComponent  },
   { path : 'accueil', component : PageAccueilComponent, canActivate : [guardGuard] , children :[
       { path : 'addCandidat', component : AjoutCandidatComponent },
       { path : 'edit', component : EditerCompteComponent },
+      { path : '' , component : PageVoteComponent}
     ] },
 
 ];

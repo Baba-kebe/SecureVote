@@ -20,7 +20,14 @@ export class CandidatService {
       }
     })
   }
+  getCandidat(id:string){
+    return this.http.get(this.url+"/getCandidat?id="+id)
+  }
   getCandidats(){
     return this.http.get(this.url+"/getCandidats");
+  }
+
+  editCandidat(edited: Candidat) {
+    return this.http.put(this.url+"/edit", edited);
   }
 }

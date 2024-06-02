@@ -1,0 +1,17 @@
+<div>
+  @if (!hasVoted){
+    <form #f="ngForm">
+      <div *ngFor="let candidat of candidats">
+        <div class="page-body">
+          <div>{{candidat.user.nom}} {{candidat.user.prenom}}</div>
+          <div>{{candidat.labelParti}}</div>
+          <div>{{candidat.nomParti}}</div>
+          <label style="font-style: italic"> Cocher ici pour voter : <input type="radio" name="choice" required></label><br>
+          <button class="btn-vote" (click)="saveVote(candidat.id)">soumettez votre vote</button>
+        </div>
+      </div>
+    </form>
+  } @else {
+    <div style="margin-top: 20px; margin-left: 20px; font-size: 20px">Vous avez déjà exercé votre droit de vote!</div>
+  }
+</div>

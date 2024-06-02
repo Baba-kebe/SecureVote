@@ -1,25 +1,3 @@
-.page-body{
-  margin-top : 40px;
-  width :70%;
-  margin-left : 10%;
-  border : 1px solid #000;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  text-align: center;
-}
-.btn-vote{
-  margin-top: 5px;
-  border : 0px;
-  min-height: 30px;
-  min-width : 20%;
-  background-color: #4CAF50;
-  color : whitesmoke;
-  text-transform: capitalize;
-  &:hover{
-    background-color: #408aff;
-    font-style: italic;
-  }
-}
 button{
   border: 0px;
   color : whitesmoke;

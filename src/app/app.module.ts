@@ -17,6 +17,7 @@ import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import {httpInterceptor} from "./interceptor/http.interceptor";
 import { KeyvaluePipe } from './keyvalue.pipe';
 import { EditerCompteComponent } from './editer-compte/editer-compte.component';
+import { PageVoteComponent } from './page-vote/page-vote.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EditerCompteComponent } from './editer-compte/editer-compte.component';
     LoginComponent,
     PageAccueilComponent,
     KeyvaluePipe,
-    EditerCompteComponent
+    EditerCompteComponent,
+    PageVoteComponent
   ],
   imports: [
     BrowserModule,
